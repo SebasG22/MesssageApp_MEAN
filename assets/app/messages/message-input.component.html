@@ -1,0 +1,10 @@
+<div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+        <form ngNativeValidate (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <label for="content"> Content</label>
+            <input type="text" id="content" class="form-control" [ngModel]="message?.content" name="content" required>
+            <button class="btn btn-danger" type="button" (click)="onClear(f)">Clear</button>
+            <button class="btn btn-primary" type="submit" [disabled]="!f.valid"> Save </button>
+        </form>
+    </div>
+</div>
